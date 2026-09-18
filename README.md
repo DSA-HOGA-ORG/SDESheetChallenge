@@ -4,10 +4,12 @@
 
 ```
 .
-├── main.py                 # entry point — imports solutions & runs LeetCode test cases
+├── main.py                 # Python runner — imports solutions & runs test cases
+├── main.cpp                # C++ runner — includes solution files & runs test cases
 ├── ArraysI/                # topic folder (one per sheet section)
 │   ├── __init__.py
-│   └── set_matrix_zeroes.py   # solution + test_cases for the problem
+│   ├── set_matrix_zeroes.py   # python solution + test_cases
+│   └── set_matrix_zeroes.cpp  # cpp solution + tests()
 ├── logs/
 │   └── daily_log.md        # per-day structured logbook
 └── .github/workflows/
@@ -18,10 +20,10 @@
 
 1. Tell opencode the **problem name** (e.g. "Set Matrix Zeroes") and the **language**
    (python / cpp / ...). It will:
-   - create a placeholder file in the right topic folder
-   - import it in `main.py` (via `KNOWN_PROBLEMS`)
+   - create a placeholder file in the right topic folder (`.py` and/or `.cpp`)
+   - register it in `main.py` (`KNOWN_PROBLEMS`) and/or `main.cpp` (`PROBLEMS`)
    - log the problem in `logs/daily_log.md`
-2. Fill in the solution, then run: `python main.py <problem-name>`
+2. Fill in the solution, then run the matching runner.
 3. Commit + push daily — done automatically by the GitHub Actions workflow.
 
 ### main.py
@@ -49,6 +51,41 @@ KNOWN_PROBLEMS = {
 
 Then run `python main.py set-matrix-zeroes`.
 
+### main.cpp
+
+Each problem file (e.g. `ArraysI/set_matrix_zeroes.cpp`) lives in a namespace and exposes
+a `tests()` function that uses the global `check_case(ok, label)` helper:
+
+```cpp
+namespace set_matrix_zeroes {
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) { ... }
+};
+void tests() {
+    Solution s;
+    vector<vector<int>> m = {{1,1,1},{1,0,1},{1,1,1}};
+    s.setZeroes(m);
+    check_case(m == vector<vector<int>>{{1,0,1},{0,0,0},{1,0,1}}, "test 1");
+}
+}  // namespace set_matrix_zeroes
+```
+
+Register it in `main.cpp` — include the file and add it to `PROBLEMS`:
+
+```cpp
+#include "ArraysI/set_matrix_zeroes.cpp"
+PROBLEMS = {{"set-matrix-zeroes", set_matrix_zeroes::tests}, ...};
+```
+
+Then build and run:
+
+```sh
+g++ -std=c++17 main.cpp -o main
+./main                      # run all problems
+./main set-matrix-zeroes    # run one problem
+```
+
 ## GitHub Actions
 
 The `daily-commit.yml` workflow runs daily (18:30 UTC = midnight IST) and pushes any
@@ -62,3 +99,8 @@ GitHub handles the rest.
 
 For pushes to succeed in GitHub Actions, Actions must have **Write** permission:
 Repo → Settings → Actions → General → Workflow permissions → "Read and write permissions".
+
+## Regenerating the C++ binary
+
+`./main`, `a.out`, `__pycache__/`, etc. are gitignored. Rebuild with
+`g++ -std=c++17 main.cpp -o main`.

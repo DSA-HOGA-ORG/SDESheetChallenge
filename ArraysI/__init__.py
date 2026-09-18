@@ -1,0 +1,1 @@
+"""Solutions for Striver's SDE Sheet — Arrays Part I."""

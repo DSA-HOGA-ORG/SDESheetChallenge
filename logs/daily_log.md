@@ -1,35 +1,68 @@
 # Striver's SDE 45-Day Challenge — Daily Log
 
-> Total days: **00 / 45**
-> Total problems solved: **0**
-> Topics covered: —
+> Total days: **01 / 45**
+> Total problems solved: **2**
+> Topics covered: Arrays I
 
 ---
 
 ## Day 01 — Friday, 18 Sep 2026
 
 **Topic:** Arrays I
-**Problems solved:** 0 / 6
+**Problems solved:** 2 / 6
 **Total time spent:** —
 
 ### Summary
-<!-- One or two lines on how the day went. -->
+Kicked off the challenge with two problems from Arrays I.
 
 ---
 
-### Problem: _Problem Name_
-- **Link:** [LeetCode](https://leetcode.com/problems/) | [Solution](../ArraysI/)
+### Problem: Set Matrix Zeroes
+- **Link:** [LeetCode](https://leetcode.com/problems/set-matrix-zeroes/) | [Solution](../ArraysI/SetMatrixZeroes.py)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - First pass records which rows and columns contain a zero using two auxiliary arrays.
+  - Second pass sets `matrix[i][j] = 0` if its row or column was marked.
+- **Complexity:** Time O(n·m) / Space O(n + m)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - Marking rows/cols first avoids corrupting the matrix mid-traversal.
+- **Next steps:**
+  - Revisit to do it in O(1) extra space using the first row and column as markers.
+
+---
+
+### Problem: Pascal's Triangle
+- **Link:** [LeetCode](https://leetcode.com/problems/pascals-triangle/) | [Solution](../ArraysI/PascalsTriangle.py)
 - **Status:** ☐ Solved | ☐ Unsolved | ☐ Need Review
 - **Time taken:** —
 - **Approach:**
-  - <!-- What algorithm/data structure did you use? -->
+  - <!-- fill in -->
 - **Complexity:** Time O(?) / Space O(?)
 - **Mistakes made:**
-  - <!-- Edge cases missed, syntax slips, wrong initial idea... -->
+  - <!-- fill in -->
 - **What I learned:**
-  - <!-- Pattern recognized, takeaway -->
+  - <!-- fill in -->
 - **Next steps:**
-  - <!-- Revisit blindly, try the follow-up, think of a new approach... -->
+  - <!-- fill in -->
+
+---
+
+### Problem: Next Permutation
+- **Link:** [LeetCode](https://leetcode.com/problems/next-permutation/) | [Solution](../ArraysI/NextPermutation.py)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
 
 ---
 

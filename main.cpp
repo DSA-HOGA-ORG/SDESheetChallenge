@@ -8,18 +8,17 @@
  *   ./main <problem-name>        run one problem
  *   ./main                       run all registered problems
  *
- * Each problem file (e.g. ArraysI/set_matrix_zeroes.cpp) defines a unique
- * test function (e.g. void set_matrix_zeroes_tests();). Register it below
- * in PROBLEMS using its slug.
+ * Each problem file (e.g. ArraysI/set_matrix_zeroes.cpp) contains ONLY the
+ * LeetCode Solution class inside a namespace. All test cases live here in
+ * main.cpp inside the `run_<slug>` function.
  */
 
-#include <cstdlib>
 #include <functional>
 #include <iostream>
 #include <map>
 #include <string>
-
-// ---- problem test functions (defined in topic folders) ----
+#include <tuple>
+#include <vector>
 
 static int g_failures = 0;
 
@@ -32,11 +31,20 @@ void check_case(bool ok, const std::string& label) {
     }
 }
 
-#include "ArraysI/set_matrix_zeroes.cpp"
+// ---- solution includes (pure Solution classes) ----
+// #include "ArraysI/set_matrix_zeroes.cpp"
+
+// ---- test runners (test cases live here) ----
+// void run_set_matrix_zeroes() {
+//     set_matrix_zeroes::Solution s;
+//     std::vector<std::vector<int>> m = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+//     s.setZeroes(m);
+//     check_case(m == std::vector<std::vector<int>>{{1, 0, 1}, {0, 0, 0}, {1, 0, 1}}, "test 1");
+// }
 
 // slug -> test function
 static const std::map<std::string, std::function<void()>> PROBLEMS = {
-    {"set-matrix-zeroes", set_matrix_zeroes::tests},
+    // {"set-matrix-zeroes", run_set_matrix_zeroes},
 };
 
 void run_problem(const std::string& slug) {

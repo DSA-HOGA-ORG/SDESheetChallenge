@@ -21,6 +21,11 @@ KNOWN_PROBLEMS = {
     "set-matrix-zeroes": ("ArraysI", "SetMatrixZeroes", "setZeroes"),
     "pascals-triangle": ("ArraysI", "PascalsTriangle", "generate"),
     "next-permutation": ("ArraysI", "NextPermutation", "nextPermutation"),
+    "maximum-subarray-sum": ("ArraysI", "MaximumSubarraySum", "maxSubArray"),
+    "sort-colors": ("ArraysI", "SortColors", "sortColors"),
+    "best-time-to-buy-and-sell-stock": ("ArraysI", "BestTimeToBuyAndSellStock", "maxProfit"),
+    "rotate-image": ("ArraysII", "RotateImage", "rotate"),
+    "merge-intervals": ("ArraysII", "MergeIntervals", "merge"),
 }
 
 # "problem-name": [(input_args_tuple, expected), ...]
@@ -38,6 +43,41 @@ TEST_CASES: dict[str, list[tuple[tuple[Any, ...], Any]]] = {
         (([3, 2, 1],), [1, 2, 3]),
         (([1, 1, 5],), [1, 5, 1]),
         (([1],), [1]),
+    ],
+    "maximum-subarray-sum": [
+        (([-2, 1, -3, 4, -1, 2, 1, -5, 4],), 6),
+        (([1],), 1),
+        (([5, 4, -1, 7, 8],), 23),
+        (([-1, -2, -3],), -1),
+        (([8, -19, 5, -4, 20],), 21),
+    ],
+    "sort-colors": [
+        (([2, 0, 2, 1, 1, 0],), [0, 0, 1, 1, 2, 2]),
+        (([2, 0, 1],), [0, 1, 2]),
+        (([0],), [0]),
+        (([1, 0],), [0, 1]),
+        (([2, 2, 0, 0, 1, 1],), [0, 0, 1, 1, 2, 2]),
+    ],
+    "best-time-to-buy-and-sell-stock": [
+        (([7, 1, 5, 3, 6, 4],), 5),
+        (([7, 6, 4, 3, 1],), 0),
+        (([1],), 0),
+        (([2, 4, 1],), 2),
+        (([3, 3, 5, 0, 0, 3, 1, 4],), 4),
+    ],
+    "rotate-image": [
+        (([[1, 2, 3], [4, 5, 6], [7, 8, 9]],), [[7, 4, 1], [8, 5, 2], [9, 6, 3]]),
+        (([[5, 1, 9, 11], [2, 4, 8, 10], [13, 3, 6, 7], [15, 14, 12, 16]],), [[15, 13, 2, 5], [14, 3, 4, 1], [12, 6, 8, 9], [16, 7, 10, 11]]),
+        (([[1]],), [[1]]),
+        (([[1, 2], [3, 4]],), [[3, 1], [4, 2]]),
+    ],
+    "merge-intervals": [
+        (([[1, 3], [2, 6], [8, 10], [15, 18]],), [[1, 6], [8, 10], [15, 18]]),
+        (([[1, 4], [4, 5]],), [[1, 5]]),
+        (([[1, 4], [2, 3]],), [[1, 4]]),
+        (([[1, 4], [0, 2], [3, 5]],), [[0, 5]]),
+        (([],), []),
+        (([[1, 4]],), [[1, 4]]),
     ],
 }
 

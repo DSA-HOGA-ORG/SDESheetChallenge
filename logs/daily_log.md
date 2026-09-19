@@ -1,19 +1,19 @@
 # Striver's SDE 45-Day Challenge — Daily Log
 
-> Total days: **01 / 45**
-> Total problems solved: **2**
-> Topics covered: Arrays I
+> Total days: **03 / 45**
+> Total problems solved: **6**
+> Topics covered: Arrays I, Arrays II
 
 ---
 
 ## Day 01 — Friday, 18 Sep 2026
 
 **Topic:** Arrays I
-**Problems solved:** 2 / 6
+**Problems solved:** 3 / 3
 **Total time spent:** —
 
 ### Summary
-Kicked off the challenge with two problems from Arrays I.
+Completed the first three problems of Arrays I.
 
 ---
 
@@ -36,7 +36,7 @@ Kicked off the challenge with two problems from Arrays I.
 
 ### Problem: Pascal's Triangle
 - **Link:** [LeetCode](https://leetcode.com/problems/pascals-triangle/) | [Solution](../ArraysI/PascalsTriangle.py)
-- **Status:** ☐ Solved | ☐ Unsolved | ☐ Need Review
+- **Status:** ☑ Solved
 - **Time taken:** —
 - **Approach:**
   - <!-- fill in -->
@@ -68,12 +68,103 @@ Kicked off the challenge with two problems from Arrays I.
 
 ## Day 02 — Saturday, 19 Sep 2026
 
-**Topic:** —
-**Problems solved:** 0
+**Topic:** Arrays I
+**Problems solved:** 3 / 3
 **Total time spent:** —
 
 ### Summary
-<!-- One or two lines on how the day went. -->
+Completed the remaining three problems of Arrays I.
+
+---
+
+### Problem: Maximum Subarray Sum (Kadane's Algorithm)
+- **Link:** [LeetCode](https://leetcode.com/problems/maximum-subarray/) | [Solution](../ArraysI/MaximumSubarraySum.py)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Sort an Array of 0's, 1's and 2's (Sort Colors)
+- **Link:** [LeetCode](https://leetcode.com/problems/sort-colors/) | [Solution](../ArraysI/SortColors.py)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Stock Buy and Sell (Best Time to Buy and Sell Stock)
+- **Link:** [LeetCode](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Solution](../ArraysI/BestTimeToBuyAndSellStock.py)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+## Day 03 — Sunday, 20 Sep 2026
+
+**Topic:** Arrays II
+**Problems solved:** 0 / 6
+**Total time spent:** —
+
+### Summary
+Started Arrays II.
+
+---
+
+### Problem: Rotate Image (Rotate Matrix)
+- **Link:** [LeetCode](https://leetcode.com/problems/rotate-image/) | [Solution](../ArraysII/RotateImage.py)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Merge Intervals
+- **Link:** [LeetCode](https://leetcode.com/problems/merge-intervals/) | [Solution](../ArraysII/MergeIntervals.py)
+- **Status:** ☐ Solved | ☐ Unsolved | ☐ Need Review
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
 
 ---
 
@@ -84,7 +175,7 @@ HOW TO USE THIS LOG:
 - Append new days at the bottom, always keeping the most recent day last.
 
 ---
-## Day 03 — <Day>, <Date>
+## Day 04 — <Day>, <Date>
 
 **Topic:** —
 **Problems solved:** 0

@@ -1,5 +1,5 @@
 /*
- * Striver's SDE 45-Day Challenge — C++ Test Runner
+ * Striver's 180 SDE Sheet — C++ Test Runner
  *
  * Mirrors main.py for C++ solutions.
  *

@@ -1,12 +1,12 @@
 """
-Striver's 180-Day SDE Sheet — Test Runner
+Striver's 45-Day Challenge (180 SDE Problems) — Test Runner
 
 Entry point for testing problem solutions against LeetCode test cases.
 
 Usage:
     python main.py [problem-name]
 
-Each problem file lives in a topic/subtopic folder matching the 180 sheet
+Each problem file lives in a topic/subtopic folder matching the sheet
 (e.g. Arrays/LinearScan, BinarySearch/SearchOnAnswer, ...) and contains ONLY
 the LeetCode `Solution` class. All test cases are defined here in TEST_CASES.
 """

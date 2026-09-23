@@ -1,7 +1,7 @@
-# Striver's 180 SDE Sheet — Daily Log
+# Striver's 45-Day Challenge — Daily Log
 
-> Total days: **00 / 180**
-> Total problems solved: **0**
+> Total days: **00 / 45**
+> Total problems solved: **0 / 180**
 
 ---
 

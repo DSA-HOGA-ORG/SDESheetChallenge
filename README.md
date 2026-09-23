@@ -1,9 +1,10 @@
-# Striver's 180 SDE Sheet
+# Striver's 45-Day Challenge — 180 SDE Problems
 
 ## Structure
 
-Mirrors the 180 SDE sheet. Problems live in `Topic/Subtopic/` folders; each file is a
-pure LeetCode `Solution` class. All test cases live in `main.py` / `main.cpp` only.
+Mirrors the 45-day SDE sheet (180 problems). Problems live in `Topic/Subtopic/`
+folders; each file is a pure LeetCode `Solution` class. All test cases live in
+`main.py` / `main.cpp` only.
 
 ```
 .

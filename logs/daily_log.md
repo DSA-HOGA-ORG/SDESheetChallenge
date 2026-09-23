@@ -168,6 +168,22 @@ Started Arrays II.
 
 ---
 
+### Problem: Merge Sorted Array
+- **Link:** [LeetCode](https://leetcode.com/problems/merge-sorted-array/) | [Solution](../ArraysII/MergeSortedArray.py)
+- **Status:** ☐ Solved | ☐ Unsolved | ☐ Need Review
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
 <!--
 HOW TO USE THIS LOG:
 - Copy the daily block below for each new day and fill it in.

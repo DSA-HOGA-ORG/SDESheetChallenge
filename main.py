@@ -26,6 +26,7 @@ KNOWN_PROBLEMS = {
     "best-time-to-buy-and-sell-stock": ("ArraysI", "BestTimeToBuyAndSellStock", "maxProfit"),
     "rotate-image": ("ArraysII", "RotateImage", "rotate"),
     "merge-intervals": ("ArraysII", "MergeIntervals", "merge"),
+    "merge-sorted-array": ("ArraysII", "MergeSortedArray", "merge"),
 }
 
 # "problem-name": [(input_args_tuple, expected), ...]
@@ -78,6 +79,11 @@ TEST_CASES: dict[str, list[tuple[tuple[Any, ...], Any]]] = {
         (([[1, 4], [0, 2], [3, 5]],), [[0, 5]]),
         (([],), []),
         (([[1, 4]],), [[1, 4]]),
+    ],
+    "merge-sorted-array": [
+        (([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3), [1, 2, 2, 3, 5, 6]),
+        (([1], 1, [], 0), [1]),
+        (([0], 0, [1], 1), [1]),
     ],
 }
 

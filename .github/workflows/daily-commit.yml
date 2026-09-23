@@ -13,7 +13,7 @@ permissions:
 jobs:
   commit:
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'shaunakmishra25'
+    if: github.repository_owner == 'DSA-HOGA-ORG'
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -22,8 +22,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config user.name "shaunakmishra25"
-          git config user.email "shaunakmishra25@users.noreply.github.com"
+          git config user.name "DSA-HOGA-ORG"
+          git config user.email "DSA-HOGA-ORG@users.noreply.github.com"
 
       - name: Commit new changes
         run: |

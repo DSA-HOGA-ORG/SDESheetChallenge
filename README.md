@@ -115,7 +115,7 @@ GitHub handles the rest.
 
 ### First-time setup
 1. Create the repo on GitHub, no README needed.
-2. `git remote add origin git@github.com:shaunakmishra25/SDESheetChallenge.git`
+2. `git remote add origin git@github.com:DSA-HOGA-ORG/SDESheetChallenge.git`
 3. `git push -u origin main`
 
 For pushes to succeed in GitHub Actions, Actions must have **Write** permission:

@@ -13,12 +13,16 @@
  * main.cpp inside the `run_<slug>` function.
  */
 
+#include <algorithm>
+#include <climits>
 #include <functional>
 #include <iostream>
 #include <map>
 #include <string>
 #include <tuple>
 #include <vector>
+
+using namespace std;
 
 static int g_failures = 0;
 
@@ -32,19 +36,28 @@ void check_case(bool ok, const std::string& label) {
 }
 
 // ---- solution includes (pure Solution classes) ----
-// #include "ArraysI/set_matrix_zeroes.cpp"
+#include "Arrays/LinearScan/MaximumProductSubarray.cpp"
 
 // ---- test runners (test cases live here) ----
-// void run_set_matrix_zeroes() {
-//     set_matrix_zeroes::Solution s;
-//     std::vector<std::vector<int>> m = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
-//     s.setZeroes(m);
-//     check_case(m == std::vector<std::vector<int>>{{1, 0, 1}, {0, 0, 0}, {1, 0, 1}}, "test 1");
-// }
+void run_maximum_product_subarray() {
+    Solution s;
+    vector<int> t1{2, 3, -2, 4};
+    vector<int> t2{-2, 0, -1};
+    vector<int> t3{-2};
+    vector<int> t4{0, 2};
+    vector<int> t5{-2, 3, -4};
+    vector<int> t6{2, -5, 3, 1, -4, 0, -10, 2, 8};
+    check_case(s.maxProduct(t1) == 6, "test 1");
+    check_case(s.maxProduct(t2) == 0, "test 2");
+    check_case(s.maxProduct(t3) == -2, "test 3");
+    check_case(s.maxProduct(t4) == 2, "test 4");
+    check_case(s.maxProduct(t5) == 24, "test 5");
+    check_case(s.maxProduct(t6) == 120, "test 6");
+}
 
 // slug -> test function
 static const std::map<std::string, std::function<void()>> PROBLEMS = {
-    // {"set-matrix-zeroes", run_set_matrix_zeroes},
+    {"maximum-product-subarray", run_maximum_product_subarray},
 };
 
 void run_problem(const std::string& slug) {

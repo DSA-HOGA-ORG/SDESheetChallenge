@@ -1,19 +1,83 @@
 # Striver's 45-Day Challenge — Daily Log
 
-> Total days: **00 / 45**
-> Total problems solved: **0 / 180**
+> Total days: **01 / 45**
+> Total problems solved: **4 / 180**
 
 ---
 
 ## Day 01 — Wednesday, 23 Sep 2026
 
-**Topic:** — (Arrays)
-**Subtopic:** —
-**Problems solved:** 0
+**Topic:** Arrays
+**Subtopic:** Linear Scan
+**Problems solved:** 4 / 4
 **Total time spent:** —
 
 ### Summary
-<!-- One or two lines on how the day went. -->
+Completed all 4 Linear Scan problems.
+
+---
+
+### Problem: Majority Element
+- **Link:** [LeetCode](https://leetcode.com/problems/majority-element/) | [Solution](../Arrays/LinearScan/MajorityElementI.py)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Majority Element II
+- **Link:** [LeetCode](https://leetcode.com/problems/majority-element-ii/) | [Solution](../Arrays/LinearScan/MajorityElementII.py)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Maximum Subarray Sum (Kadane's)
+- **Link:** [LeetCode](https://leetcode.com/problems/maximum-subarray/) | [Solution](../Arrays/LinearScan/MaximumSubarraySum.py)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Maximum Product Subarray
+- **Link:** [LeetCode](https://leetcode.com/problems/maximum-product-subarray/) | [Solution](../Arrays/LinearScan/MaximumProductSubarray.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
 
 ---
 

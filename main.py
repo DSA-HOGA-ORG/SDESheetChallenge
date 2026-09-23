@@ -18,10 +18,29 @@ from typing import Any
 
 # "problem-name": ("topic.subtopic", "module_name", "method_name")
 KNOWN_PROBLEMS = {
+    "majority-element": ("Arrays.LinearScan", "MajorityElementI", "majorityElement"),
+    "majority-element-ii": ("Arrays.LinearScan", "MajorityElementII", "majorityElement"),
+    "maximum-subarray-sum": ("Arrays.LinearScan", "MaximumSubarraySum", "maxSubArray"),
 }
 
 # "problem-name": [(input_args_tuple, expected), ...]
 TEST_CASES: dict[str, list[tuple[tuple[Any, ...], Any]]] = {
+    "majority-element": [
+        (([3, 2, 3],), 3),
+        (([2, 2, 1, 1, 1, 2, 2],), 2),
+        (([1],), 1),
+        (([6, 5, 5],), 5),
+    ],
+    "majority-element-ii": [
+        (([3, 2, 3],), [3]),
+        (([1],), [1]),
+        (([1, 2],), [1, 2]),
+    ],
+    "maximum-subarray-sum": [
+        (([-2, 1, -3, 4, -1, 2, 1, -5, 4],), 6),
+        (([1],), 1),
+        (([5, 4, -1, 7, 8],), 23),
+    ],
 }
 
 

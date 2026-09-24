@@ -1,3 +1,8 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+namespace maximum_product_subarray {
+
 class Solution {
 public:
     int maxProduct(vector<int>& nums) {
@@ -17,3 +22,5 @@ public:
         return ans;
     }
 };
+
+}  // namespace maximum_product_subarray

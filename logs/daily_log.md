@@ -1,7 +1,7 @@
 # Striver's 45-Day Challenge — Daily Log
 
-> Total days: **01 / 45**
-> Total problems solved: **4 / 180**
+> Total days: **02 / 45**
+> Total problems solved: **8 / 180**
 
 ---
 
@@ -81,6 +81,82 @@ Completed all 4 Linear Scan problems.
 
 ---
 
+## Day 02 — Thursday, 24 Sep 2026
+
+**Topic:** Arrays
+**Subtopic:** Two Pointers
+**Problems solved:** 4 / 4
+**Total time spent:** —
+
+### Summary
+Completed all 4 Two Pointers problems.
+
+---
+
+### Problem: Sort Colors
+- **Link:** [LeetCode](https://leetcode.com/problems/sort-colors/) | [Solution](../Arrays/TwoPointers/SortColors.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: 3 Sum
+- **Link:** [LeetCode](https://leetcode.com/problems/3sum/) | [Solution](../Arrays/TwoPointers/ThreeSum.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Next Permutation
+- **Link:** [LeetCode](https://leetcode.com/problems/next-permutation/) | [Solution](../Arrays/TwoPointers/NextPermutation.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: 4 Sum
+- **Link:** [LeetCode](https://leetcode.com/problems/4sum/) | [Solution](../Arrays/TwoPointers/FourSum.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
 <!--
 HOW TO USE THIS LOG:
 - Copy the daily block below for each new day and fill it in.
@@ -88,7 +164,7 @@ HOW TO USE THIS LOG:
 - Append new days at the bottom, always keeping the most recent day last.
 
 ---
-## Day 02 — <Day>, <Date>
+## Day 03 — <Day>, <Date>
 
 **Topic:** —
 **Subtopic:** —

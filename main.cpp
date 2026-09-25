@@ -41,8 +41,30 @@ void check_case(bool ok, const std::string& label) {
 #include "Arrays/TwoPointers/ThreeSum.cpp"
 #include "Arrays/TwoPointers/NextPermutation.cpp"
 #include "Arrays/TwoPointers/FourSum.cpp"
+#include "Arrays/TwoPointers/MergeSortedArray.cpp"
+#include "Arrays/TwoPointers/TrappingRainWater.cpp"
 
 // ---- test runners (test cases live here) ----
+void run_trapping_rain_water() {
+    trapping_rain_water::Solution s;
+    vector<int> t1{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
+    vector<int> t2{4, 2, 0, 3, 2, 5};
+    vector<int> t3{2, 0, 2};
+    check_case(s.trap(t1) == 6, "test 1");
+    check_case(s.trap(t2) == 9, "test 2");
+    check_case(s.trap(t3) == 2, "test 3");
+}
+
+void run_merge_sorted_array() {
+    merge_sorted_array::Solution s;
+    vector<int> t1{1, 2, 3, 0, 0, 0}; vector<int> n1{2, 5, 6};
+    vector<int> t2{1};                 vector<int> n2{};
+    vector<int> t3{0};                 vector<int> n3{1};
+    s.merge(t1, 3, n1, 3); check_case(t1 == (vector<int>{1, 2, 2, 3, 5, 6}), "test 1");
+    s.merge(t2, 1, n2, 0); check_case(t2 == (vector<int>{1}), "test 2");
+    s.merge(t3, 0, n3, 1); check_case(t3 == (vector<int>{1}), "test 3");
+}
+
 void run_four_sum() {
     four_sum::Solution s;
     vector<int> t1{1, 0, -1, 0, -2, 2};
@@ -108,6 +130,8 @@ static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"three-sum", run_three_sum},
     {"next-permutation", run_next_permutation},
     {"four-sum", run_four_sum},
+    {"merge-sorted-array", run_merge_sorted_array},
+    {"trapping-rain-water", run_trapping_rain_water},
 };
 
 void run_problem(const std::string& slug) {

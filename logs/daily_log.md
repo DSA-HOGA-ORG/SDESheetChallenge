@@ -1,7 +1,7 @@
 # Striver's 45-Day Challenge — Daily Log
 
 > Total days: **02 / 45**
-> Total problems solved: **8 / 180**
+> Total problems solved: **10 / 180**
 
 ---
 
@@ -85,7 +85,7 @@ Completed all 4 Linear Scan problems.
 
 **Topic:** Arrays
 **Subtopic:** Two Pointers
-**Problems solved:** 4 / 4
+**Problems solved:** 6 / 6
 **Total time spent:** —
 
 ### Summary
@@ -143,6 +143,38 @@ Completed all 4 Two Pointers problems.
 
 ### Problem: 4 Sum
 - **Link:** [LeetCode](https://leetcode.com/problems/4sum/) | [Solution](../Arrays/TwoPointers/FourSum.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Merge Sorted Array
+- **Link:** [LeetCode](https://leetcode.com/problems/merge-sorted-array/) | [Solution](../Arrays/TwoPointers/MergeSortedArray.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Trapping Rain Water
+- **Link:** [LeetCode](https://leetcode.com/problems/trapping-rain-water/) | [Solution](../Arrays/TwoPointers/TrappingRainWater.cpp)
 - **Status:** ☑ Solved
 - **Time taken:** —
 - **Approach:**

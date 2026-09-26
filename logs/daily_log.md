@@ -1,6 +1,6 @@
 # Striver's 45-Day Challenge — Daily Log
 
-> Total days: **03 / 45**
+> Total days: **04 / 45**
 > Total problems solved: **10 / 180**
 
 ---
@@ -234,6 +234,34 @@ Completed 2 Two Pointers problems.
 
 ---
 
+## Day 04 — Saturday, 26 Sep 2026
+
+**Topic:** Arrays
+**Subtopic:** Divide and Conquer
+**Problems solved:** 0 (1 in review)
+**Total time spent:** —
+
+### Summary
+Tackled Count Inversions with the naive approach; optimal merge-sort version in progress.
+
+---
+
+### Problem: Count Inversions
+- **Link:** [GeeksforGeeks](https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1) | [Solution](../Arrays/DivideAndConquer/CountInversion.cpp)
+- **Status:** ☐ Solved | ☐ Unsolved | ☑ Need Review
+- **Time taken:** —
+- **Approach:**
+  - <!-- fill in -->
+- **Complexity:** Time O(?) / Space O(?)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- Replace naive with merge-sort O(n log n) -->
+
+---
+
 <!--
 HOW TO USE THIS LOG:
 - Copy the daily block below for each new day and fill it in.
@@ -241,7 +269,7 @@ HOW TO USE THIS LOG:
 - Append new days at the bottom, always keeping the most recent day last.
 
 ---
-## Day 04 — <Day>, <Date>
+## Day 05 — <Day>, <Date>
 
 **Topic:** —
 **Subtopic:** —

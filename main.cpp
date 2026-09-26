@@ -43,8 +43,18 @@ void check_case(bool ok, const std::string& label) {
 #include "Arrays/TwoPointers/FourSum.cpp"
 #include "Arrays/TwoPointers/MergeSortedArray.cpp"
 #include "Arrays/TwoPointers/TrappingRainWater.cpp"
+#include "Arrays/DivideAndConquer/CountInversion.cpp"
 
 // ---- test runners (test cases live here) ----
+void run_count_inversions() {
+    vector<int> t1{2, 4, 1, 3, 5};
+    vector<int> t2{2, 3, 4, 5, 6};
+    vector<int> t3{10, 10, 10};
+    check_case(count_inversions::inversionCount(t1) == 3, "test 1");
+    check_case(count_inversions::inversionCount(t2) == 0, "test 2");
+    check_case(count_inversions::inversionCount(t3) == 0, "test 3");
+}
+
 void run_trapping_rain_water() {
     trapping_rain_water::Solution s;
     vector<int> t1{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
@@ -132,6 +142,7 @@ static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"four-sum", run_four_sum},
     {"merge-sorted-array", run_merge_sorted_array},
     {"trapping-rain-water", run_trapping_rain_water},
+    {"count-inversions", run_count_inversions},
 };
 
 void run_problem(const std::string& slug) {

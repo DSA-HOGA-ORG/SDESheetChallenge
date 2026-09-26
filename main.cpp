@@ -44,6 +44,9 @@ void check_case(bool ok, const std::string& label) {
 #include "Arrays/TwoPointers/MergeSortedArray.cpp"
 #include "Arrays/TwoPointers/TrappingRainWater.cpp"
 #include "Arrays/DivideAndConquer/CountInversion.cpp"
+#include "Arrays/DivideAndConquer/ReversePairs.cpp"
+#include "Hashing/HashingAndPrefixSums/TwoSum.cpp"
+#include "Hashing/HashingAndPrefixSums/LongestConsecutiveSequence.cpp"
 
 // ---- test runners (test cases live here) ----
 void run_count_inversions() {
@@ -133,6 +136,40 @@ void run_maximum_product_subarray() {
     check_case(s.maxProduct(t6) == 120, "test 6");
 }
 
+void run_two_sum() {
+    two_sum::Solution s;
+    vector<int> t1{2, 7, 11, 15};
+    vector<int> t2{3, 2, 4};
+    vector<int> t3{3, 3};
+    check_case(s.twoSum(t1, 9) == (vector<int>{0, 1}), "test 1");
+    check_case(s.twoSum(t2, 6) == (vector<int>{1, 2}), "test 2");
+    check_case(s.twoSum(t3, 6) == (vector<int>{0, 1}), "test 3");
+}
+
+void run_longest_consecutive() {
+    longest_consecutive::Solution s;
+    vector<int> t1{100, 4, 200, 1, 3, 2};
+    vector<int> t2{0, 3, 7, 2, 5, 8, 4, 6, 0, 1};
+    vector<int> t3{};
+    vector<int> t4{1, 1, 1};
+    check_case(s.longestConsecutive(t1) == 4, "test 1");
+    check_case(s.longestConsecutive(t2) == 9, "test 2");
+    check_case(s.longestConsecutive(t3) == 0, "test 3");
+    check_case(s.longestConsecutive(t4) == 1, "test 4");
+}
+
+void run_reverse_pairs() {
+    reverse_pairs::Solution s;
+    vector<int> t1{1, 3, 2, 3, 1};
+    vector<int> t2{2, 4, 3, 5, 1};
+    vector<int> t3{5, 4, 3, 2, 1};
+    vector<int> t4{1, 2, 3, 4, 5};
+    check_case(s.reversePairs(t1) == 2, "test 1");
+    check_case(s.reversePairs(t2) == 3, "test 2");
+    check_case(s.reversePairs(t3) == 4, "test 3");
+    check_case(s.reversePairs(t4) == 0, "test 4");
+}
+
 // slug -> test function
 static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"maximum-product-subarray", run_maximum_product_subarray},
@@ -143,6 +180,9 @@ static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"merge-sorted-array", run_merge_sorted_array},
     {"trapping-rain-water", run_trapping_rain_water},
     {"count-inversions", run_count_inversions},
+    {"two-sum", run_two_sum},
+    {"longest-consecutive-sequence", run_longest_consecutive},
+    {"reverse-pairs", run_reverse_pairs},
 };
 
 void run_problem(const std::string& slug) {

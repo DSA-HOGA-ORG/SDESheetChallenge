@@ -1,7 +1,7 @@
 # Striver's 45-Day Challenge — Daily Log
 
 > Total days: **04 / 45**
-> Total problems solved: **10 / 180**
+> Total problems solved: **14 / 180**
 
 ---
 
@@ -236,29 +236,77 @@ Completed 2 Two Pointers problems.
 
 ## Day 04 — Saturday, 26 Sep 2026
 
-**Topic:** Arrays
-**Subtopic:** Divide and Conquer
-**Problems solved:** 0 (1 in review)
+**Topic:** Arrays + Hashing
+**Subtopic:** Divide and Conquer + Hashing and Prefix Sums
+**Problems solved:** 4 / 4
 **Total time spent:** —
 
 ### Summary
-Tackled Count Inversions with the naive approach; optimal merge-sort version in progress.
+Completed Divide and Conquer (Count Inversions via merge-sort, Reverse Pairs) and Hashing (Two Sum, Longest Consecutive Sequence).
 
 ---
 
 ### Problem: Count Inversions
 - **Link:** [GeeksforGeeks](https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1) | [Solution](../Arrays/DivideAndConquer/CountInversion.cpp)
-- **Status:** ☐ Solved | ☐ Unsolved | ☑ Need Review
+- **Status:** ☑ Solved
 - **Time taken:** —
 - **Approach:**
   - <!-- fill in -->
-- **Complexity:** Time O(?) / Space O(?)
+- **Complexity:** Time O(n log n) / Space O(n)
+- **Mistakes made:**
+  - Missing base case and return in countInv; wrong index in left copy; by-value param; int overflow — all fixed
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- Merge-sort inversion count is complete and passing -->
+
+---
+
+### Problem: Reverse Pairs
+- **Link:** [LeetCode](https://leetcode.com/problems/reverse-pairs/) | [Solution](../Arrays/DivideAndConquer/ReversePairs.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- Merge-sort counting nums[i] > 2*nums[j] via two-pointer before inplace_merge -->
+- **Complexity:** Time O(n log n) / Space O(n)
 - **Mistakes made:**
   - <!-- fill in -->
 - **What I learned:**
   - <!-- fill in -->
 - **Next steps:**
-  - <!-- Replace naive with merge-sort O(n log n) -->
+  - <!-- fill in -->
+
+---
+
+### Problem: Two Sum
+- **Link:** [LeetCode](https://leetcode.com/problems/two-sum/) | [Solution](../Hashing/HashingAndPrefixSums/TwoSum.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- Hash map: store value -> index, look up target - nums[i] -->
+- **Complexity:** Time O(n) / Space O(n)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Longest Consecutive Sequence
+- **Link:** [LeetCode](https://leetcode.com/problems/longest-consecutive-sequence/) | [Solution](../Hashing/HashingAndPrefixSums/LongestConsecutiveSequence.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- Insert into unordered_set; count only from sequence starts -->
+- **Complexity:** Time O(n) / Space O(n)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
 
 ---
 

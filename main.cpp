@@ -47,6 +47,7 @@ void check_case(bool ok, const std::string& label) {
 #include "Arrays/DivideAndConquer/ReversePairs.cpp"
 #include "Hashing/HashingAndPrefixSums/TwoSum.cpp"
 #include "Hashing/HashingAndPrefixSums/LongestConsecutiveSequence.cpp"
+#include "Hashing/HashingAndPrefixSums/SubarraySumEqualsK.cpp"
 
 // ---- test runners (test cases live here) ----
 void run_count_inversions() {
@@ -170,6 +171,18 @@ void run_reverse_pairs() {
     check_case(s.reversePairs(t4) == 0, "test 4");
 }
 
+void run_subarray_sum_equals_k() {
+    subarray_sum_equals_k::Solution s;
+    vector<int> t1{1, 1, 1};
+    vector<int> t2{1, 2, 3};
+    vector<int> t3{1, -1, 0};
+    vector<int> t4{3, 4, 7, 2, -3, 1, 4, 2};
+    check_case(s.subarraySum(t1, 2) == 2, "test 1");
+    check_case(s.subarraySum(t2, 3) == 2, "test 2");
+    check_case(s.subarraySum(t3, 0) == 3, "test 3");
+    check_case(s.subarraySum(t4, 7) == 4, "test 4");
+}
+
 // slug -> test function
 static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"maximum-product-subarray", run_maximum_product_subarray},
@@ -183,6 +196,7 @@ static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"two-sum", run_two_sum},
     {"longest-consecutive-sequence", run_longest_consecutive},
     {"reverse-pairs", run_reverse_pairs},
+    {"subarray-sum-equals-k", run_subarray_sum_equals_k},
 };
 
 void run_problem(const std::string& slug) {

@@ -1,7 +1,7 @@
 # Striver's 45-Day Challenge — Daily Log
 
-> Total days: **04 / 45**
-> Total problems solved: **14 / 180**
+> Total days: **05 / 45**
+> Total problems solved: **15 / 180**
 
 ---
 
@@ -310,6 +310,34 @@ Completed Divide and Conquer (Count Inversions via merge-sort, Reverse Pairs) an
 
 ---
 
+## Day 05 — Sunday, 27 Sep 2026
+
+**Topic:** Hashing
+**Subtopic:** Hashing and Prefix Sums
+**Problems solved:** 1 / 1
+**Total time spent:** —
+
+### Summary
+Solved Subarray Sum Equals K using prefix-sum with a frequency map.
+
+---
+
+### Problem: Subarray Sum Equals K
+- **Link:** [LeetCode](https://leetcode.com/problems/subarray-sum-equals-k/) | [Solution](../Hashing/HashingAndPrefixSums/SubarraySumEqualsK.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- Prefix sums; count how many earlier prefix-sum values equal preSum - k -->
+- **Complexity:** Time O(n) / Space O(n)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
 <!--
 HOW TO USE THIS LOG:
 - Copy the daily block below for each new day and fill it in.
@@ -317,7 +345,7 @@ HOW TO USE THIS LOG:
 - Append new days at the bottom, always keeping the most recent day last.
 
 ---
-## Day 05 — <Day>, <Date>
+## Day 06 — <Day>, <Date>
 
 **Topic:** —
 **Subtopic:** —

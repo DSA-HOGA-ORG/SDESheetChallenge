@@ -1,7 +1,7 @@
 # Striver's 45-Day Challenge — Daily Log
 
 > Total days: **04 / 45**
-> Total problems solved: **14 / 180**
+> Total problems solved: **13 / 180**
 
 ---
 
@@ -238,17 +238,17 @@ Completed 2 Two Pointers problems.
 
 **Topic:** Arrays + Hashing
 **Subtopic:** Divide and Conquer + Hashing and Prefix Sums
-**Problems solved:** 4 / 4
+**Problems solved:** 3 / 4
 **Total time spent:** —
 
 ### Summary
-Completed Divide and Conquer (Count Inversions via merge-sort, Reverse Pairs) and Hashing (Two Sum, Longest Consecutive Sequence).
+Completed Divide and Conquer (Reverse Pairs) and Hashing (Two Sum, Longest Consecutive Sequence); Count Inversions merge-sort still under review.
 
 ---
 
 ### Problem: Count Inversions
 - **Link:** [GeeksforGeeks](https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1) | [Solution](../Arrays/DivideAndConquer/CountInversion.cpp)
-- **Status:** ☑ Solved
+- **Status:** ☐ Solved | ☐ Unsolved | ☑ Need Review
 - **Time taken:** —
 - **Approach:**
   - <!-- fill in -->
@@ -258,7 +258,7 @@ Completed Divide and Conquer (Count Inversions via merge-sort, Reverse Pairs) an
 - **What I learned:**
   - <!-- fill in -->
 - **Next steps:**
-  - <!-- Merge-sort inversion count is complete and passing -->
+  - <!-- Re-verify merge-sort submission on GfG, then mark solved -->
 
 ---
 

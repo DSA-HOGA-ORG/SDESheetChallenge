@@ -1,7 +1,7 @@
 # Striver's 45-Day Challenge — Daily Log
 
 > Total days: **05 / 45**
-> Total problems solved: **15 / 180**
+> Total problems solved: **16 / 180**
 
 ---
 
@@ -314,11 +314,11 @@ Completed Divide and Conquer (Count Inversions via merge-sort, Reverse Pairs) an
 
 **Topic:** Hashing
 **Subtopic:** Hashing and Prefix Sums
-**Problems solved:** 1 / 1
+**Problems solved:** 2 / 2
 **Total time spent:** —
 
 ### Summary
-Solved Subarray Sum Equals K using prefix-sum with a frequency map.
+Solved Subarray Sum Equals K and Longest Subarray with Sum K using prefix-sum + frequency/earliest-index maps.
 
 ---
 
@@ -331,6 +331,22 @@ Solved Subarray Sum Equals K using prefix-sum with a frequency map.
 - **Complexity:** Time O(n) / Space O(n)
 - **Mistakes made:**
   - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Longest Subarray with Sum K
+- **Link:** [GeeksforGeeks](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1) | [Solution](../Hashing/HashingAndPrefixSums/LongestSubarrayWithSumK.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - <!-- Prefix sums; keep EARLIEST index of each prefix sum so i - preSum[rem] is maximal -->
+- **Complexity:** Time O(n) / Space O(n)
+- **Mistakes made:**
+  - Overwriting preSum with latest index shortened lengths when prefix sums repeated; storing first occurrence fixes it
 - **What I learned:**
   - <!-- fill in -->
 - **Next steps:**

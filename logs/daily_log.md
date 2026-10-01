@@ -1,7 +1,7 @@
 # Striver's 45-Day Challenge — Daily Log
 
-> Total days: **05 / 45**
-> Total problems solved: **16 / 180**
+> Total days: **08 / 45**
+> Total problems solved: **19 / 180**
 
 ---
 
@@ -187,6 +187,83 @@ HOW TO USE THIS LOG:
 - **Next steps:**
   - <!-- Revisit blindly, try the follow-up, think of a new approach... -->
 -->
+
+---
+
+## Day 06 — Tuesday, 29 Sep 2026
+
+**Topic:** Binary Search
+**Subtopic:** Binary Search (on the answer's monotonicity)
+**Problems solved:** 1 / 1
+**Total time spent:** —
+
+### Summary
+Solved Find Peak Element with the standard slope-based binary search on an
+unsorted array.
+
+---
+
+### Problem: Find Peak Element
+- **Link:** [LeetCode](https://leetcode.com/problems/find-peak-element/) | [Solution](../BinarySearch/BinarySearch/FindPeakElement.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - Compare `nums[mid]` with `nums[mid + 1]`: if ascending, a peak must exist to
+    the right of `mid` → `low = mid + 1`; otherwise a peak exists at `mid` or to
+    its left → `high = mid`
+  - `low < high` with `low = high` as the exit, so `mid + 1` is always in range
+  - Loop invariant: a peak always exists inside `[low, high]`
+- **Complexity:** Time O(log n) / Space O(1)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Search in Rotated Sorted Array II
+- **Link:** [LeetCode](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/) | [Solution](../BinarySearch/BinarySearch/SearchInRotatedSortedArrayII.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - Binary search on a rotated array, but duplicates break the "one half is sorted"
+    assumption
+  - Degenerate case: if `nums[low] == nums[mid] == nums[high]`, neither half can be
+    trusted → shrink both ends, which is why the worst case degrades to O(n)
+  - Otherwise use the sorted half (`nums[low] <= nums[mid]` → left sorted) and
+    check whether `target` falls in its range before deciding direction
+- **Complexity:** Time O(log n) average, O(n) worst case / Space O(1)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Find Minimum in Rotated Sorted Array
+- **Link:** [LeetCode](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [Solution](../BinarySearch/BinarySearch/FindMinInRotatedSortedArray.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - Compare `nums[mid]` with `nums[high]`: if `nums[mid] > nums[high]`, the
+    rotation point (and thus the minimum) is strictly right of `mid` →
+    `low = mid + 1`
+  - Otherwise the right half is sorted, so the minimum sits at `mid` or to its
+    left → `high = mid`
+  - `low < high` means the answer is `nums[low]` on convergence
+- **Complexity:** Time O(log n) / Space O(1)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
 
 ---
 

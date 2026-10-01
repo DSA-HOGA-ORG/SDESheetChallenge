@@ -49,6 +49,10 @@ void check_case(bool ok, const std::string& label) {
 #include "Hashing/HashingAndPrefixSums/LongestConsecutiveSequence.cpp"
 #include "Hashing/HashingAndPrefixSums/SubarraySumEqualsK.cpp"
 #include "Hashing/HashingAndPrefixSums/LongestSubarrayWithSumK.cpp"
+#include "DailyLeetCodeChallenge/September/CheckIfThereIsAValidParenthesesStringPath.cpp"
+#include "BinarySearch/BinarySearch/FindPeakElement.cpp"
+#include "BinarySearch/BinarySearch/FindMinInRotatedSortedArray.cpp"
+#include "BinarySearch/BinarySearch/SearchInRotatedSortedArrayII.cpp"
 
 // ---- test runners (test cases live here) ----
 void run_count_inversions() {
@@ -198,6 +202,82 @@ void run_longest_subarray_with_sum_k() {
     check_case(s.longestSubarray(t5, 1) == 4, "test 5");
 }
 
+void run_check_if_valid_parentheses_path() {
+    valid_parentheses_path::Solution s1;
+    vector<vector<char>> t1{{'(', '(', '('}, {')', '(', ')'}, {'(', '(', ')'}, {'(', '(', ')'}};
+    check_case(s1.hasValidPath(t1), "test 1 (4x3, path exists)");
+
+    valid_parentheses_path::Solution s2;
+    vector<vector<char>> t2{{')', ')'}, {'(', '('}};
+    check_case(!s2.hasValidPath(t2), "test 2 (2x2, no path)");
+
+    valid_parentheses_path::Solution s3;
+    vector<vector<char>> t3{{'('}, {')'}};
+    check_case(s3.hasValidPath(t3), "test 3 (2x1, \"()\")");
+
+    valid_parentheses_path::Solution s4;
+    vector<vector<char>> t4{{'('}};
+    check_case(!s4.hasValidPath(t4), "test 4 (1x1, odd length)");
+
+    valid_parentheses_path::Solution s5;
+    vector<vector<char>> t5{{')', '('}, {'(', ')'}};
+    check_case(!s5.hasValidPath(t5), "test 5 (2x2, bad start)");
+
+    valid_parentheses_path::Solution s6;
+    vector<vector<char>> t6{{'(', '(', ')'}, {')', ')', ')'}};
+    check_case(s6.hasValidPath(t6), "test 6 (2x3, \"(())\")");
+
+    valid_parentheses_path::Solution s7;
+    vector<vector<char>> t7{{'(', ')'}, {'(', ')'}};
+    check_case(!s7.hasValidPath(t7), "test 7 (2x2, odd path length)");
+}
+
+void run_find_peak_element() {
+    find_peak_element::Solution s;
+    vector<int> t1{1, 2, 3, 1};
+    vector<int> t2{1, 2, 1, 3, 5, 6, 4};
+    vector<int> t3{1};
+    vector<int> t4{1, 2};
+    vector<int> t5{2, 1};
+    check_case(s.findPeakElement(t1) == 2, "test 1");
+    check_case(s.findPeakElement(t2) == 1 || s.findPeakElement(t2) == 5, "test 2 (1 or 5)");
+    check_case(s.findPeakElement(t3) == 0, "test 3");
+    check_case(s.findPeakElement(t4) == 1, "test 4");
+    check_case(s.findPeakElement(t5) == 0, "test 5");
+}
+
+void run_find_min_rotated() {
+    find_min_rotated::Solution s;
+    vector<int> t1{3, 4, 5, 1, 2};
+    vector<int> t2{4, 5, 6, 7, 0, 1, 2};
+    vector<int> t3{11, 13, 15, 17};
+    vector<int> t4{1};
+    vector<int> t5{2, 1};
+    vector<int> t6{1, 2, 3, 4, 5};
+    check_case(s.findMin(t1) == 1, "test 1");
+    check_case(s.findMin(t2) == 0, "test 2");
+    check_case(s.findMin(t3) == 11, "test 3 (not rotated)");
+    check_case(s.findMin(t4) == 1, "test 4 (single element)");
+    check_case(s.findMin(t5) == 1, "test 5");
+    check_case(s.findMin(t6) == 1, "test 6 (already sorted)");
+}
+
+void run_search_rotated_ii() {
+    search_rotated_ii::Solution s;
+    vector<int> t1{2, 5, 6, 0, 0, 1, 2};
+    vector<int> t2{2, 5, 6, 0, 0, 1, 2};
+    vector<int> t3{1, 0, 1, 1, 1};
+    vector<int> t4{1, 1, 1, 1, 1};
+    vector<int> t5{1};
+    vector<int> t6{3, 1};
+    check_case(s.search(t1, 0), "test 1 (target 0 present)");
+    check_case(!s.search(t2, 3), "test 2 (target 3 absent)");
+    check_case(s.search(t3, 0), "test 3 (target 0 present)");
+    check_case(!s.search(t4, 2), "test 4 (all equal, target absent)");
+    check_case(!s.search(t5, 0), "test 5 (single element)");
+    check_case(s.search(t6, 1), "test 6 (target 1 present)");
+}
+
 // slug -> test function
 static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"maximum-product-subarray", run_maximum_product_subarray},
@@ -213,6 +293,10 @@ static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"reverse-pairs", run_reverse_pairs},
     {"subarray-sum-equals-k", run_subarray_sum_equals_k},
     {"longest-subarray-with-sum-k", run_longest_subarray_with_sum_k},
+    {"check-if-there-is-a-valid-parentheses-string-path", run_check_if_valid_parentheses_path},
+    {"find-peak-element", run_find_peak_element},
+    {"find-minimum-in-rotated-sorted-array", run_find_min_rotated},
+    {"search-in-rotated-sorted-array-ii", run_search_rotated_ii},
 };
 
 void run_problem(const std::string& slug) {

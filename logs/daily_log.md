@@ -1,7 +1,7 @@
 # Striver's 45-Day Challenge — Daily Log
 
-> Total days: **08 / 45**
-> Total problems solved: **19 / 180**
+> Total days: **10 / 45**
+> Total problems solved: **21 / 180**
 
 ---
 
@@ -218,6 +218,49 @@ unsorted array.
   - <!-- fill in -->
 - **What I learned:**
   - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Single Element in a Sorted Array (540)
+- **Link:** [LeetCode](https://leetcode.com/problems/single-element-in-a-sorted-array/) | [Solution](../BinarySearch/BinarySearch/SingleElementInSortedArray.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - XOR trick for the pair partner: `mid ^ 1` flips only the last bit, so it
+    returns `mid - 1` when `mid` is even and `mid + 1` when `mid` is odd — no
+    parity branch needed
+  - `nums[mid] != nums[mid ^ 1]` → the pair is broken here, so the single element
+    is at `mid` or to its left → `high = mid`
+  - Otherwise the pair is intact and the answer is strictly right → `low = mid + 1`
+  - Loop invariant: the answer stays inside `[low, high]`
+- **Complexity:** Time O(log n) / Space O(1)
+- **Mistakes made:**
+  - Wrote `class solution` / `singlenonduplicate` in lowercase — renamed to
+    `Solution` / `singleNonDuplicate` to match LeetCode
+- **What I learned:**
+  - `mid ^ 1` is a cleaner way to reach a pair partner than an `if (mid % 2)` fix-up
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Search a 2D Matrix II (240)
+- **Link:** [LeetCode](https://leetcode.com/problems/search-a-2d-matrix-ii/) | [Solution](../BinarySearch/BinarySearch/Search2DMatrixII.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - Staircase search from the top-right corner: rows ascend, columns descend
+  - `matrix[row][col] < target` → everything left in this row is smaller → `row++`
+  - `matrix[row][col] > target` → everything below in this column is larger → `col--`
+  - Each step eliminates one row or one column, so at most `m + n` steps
+- **Complexity:** Time O(m + n) / Space O(1)
+- **Mistakes made:**
+  - <!-- fill in -->
+- **What I learned:**
+  - Rows sorted + columns sorted ≠ the whole matrix is sorted, so a single flat
+    binary search does not apply; the staircase exploits the two axes separately
 - **Next steps:**
   - <!-- fill in -->
 

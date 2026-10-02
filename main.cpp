@@ -53,6 +53,8 @@ void check_case(bool ok, const std::string& label) {
 #include "BinarySearch/BinarySearch/FindPeakElement.cpp"
 #include "BinarySearch/BinarySearch/FindMinInRotatedSortedArray.cpp"
 #include "BinarySearch/BinarySearch/SearchInRotatedSortedArrayII.cpp"
+#include "BinarySearch/BinarySearch/Search2DMatrixII.cpp"
+#include "BinarySearch/BinarySearch/SingleElementInSortedArray.cpp"
 
 // ---- test runners (test cases live here) ----
 void run_count_inversions() {
@@ -278,6 +280,58 @@ void run_search_rotated_ii() {
     check_case(s.search(t6, 1), "test 6 (target 1 present)");
 }
 
+void run_search_2d_matrix_ii() {
+    search_2d_matrix_ii::Solution s;
+    vector<vector<int>> t1{
+        {1, 4, 7, 11, 15},
+        {2, 5, 8, 12, 19},
+        {3, 6, 9, 16, 22},
+        {10, 13, 14, 17, 24},
+        {18, 21, 23, 26, 30}};
+    check_case(s.searchMatrix(t1, 5), "test 1 (target 5 found)");
+    check_case(!s.searchMatrix(t1, 20), "test 2 (target 20 absent)");
+    vector<vector<int>> t2{
+        {1},
+        {3}};
+    check_case(s.searchMatrix(t2, 3), "test 3 (single column)");
+    vector<vector<int>> t3{
+        {1, 3}};
+    check_case(s.searchMatrix(t3, 1), "test 4 (single row, first)");
+    check_case(!s.searchMatrix(t3, 2), "test 5 (single row, absent)");
+    vector<vector<int>> t4{
+        {5, 6, 7, 8, 9},
+        {10, 11, 12, 13, 14},
+        {15, 16, 17, 18, 19}};
+    check_case(s.searchMatrix(t4, 17), "test 6 (row-sorted, cols sorted)");
+
+    // brute-force cross-check
+    auto brute = [&](vector<vector<int>>& mat, int t) {
+        for (auto& r : mat) for (int v : r) if (v == t) return true;
+        return false;
+    };
+    bool ok = true;
+    for (int target = -2; target <= 32; target++) ok = ok && (s.searchMatrix(t1, target) == brute(t1, target));
+    check_case(ok, "test 7 (exhaustive vs brute force, targets -2..32)");
+}
+
+void run_single_element_sorted() {
+  single_element_sorted::Solution s;
+  vector<int> t1{1, 1, 2, 3, 3, 4, 4, 8, 8};
+  vector<int> t2{3, 3, 7, 7, 10, 11, 11};
+  vector<int> t3{1};
+  vector<int> t4{1, 1, 2};
+  vector<int> t5{0, 1, 1};
+  vector<int> t6{1, 1, 1, 1, 2};
+  vector<int> t7{1, 1, 2, 2, 3};
+  check_case(s.singleNonDuplicate(t1) == 2, "test 1");
+  check_case(s.singleNonDuplicate(t2) == 10, "test 2");
+  check_case(s.singleNonDuplicate(t3) == 1, "test 3 (single element)");
+  check_case(s.singleNonDuplicate(t4) == 2, "test 4 (single at end)");
+  check_case(s.singleNonDuplicate(t5) == 0, "test 5 (single at start)");
+  check_case(s.singleNonDuplicate(t6) == 2, "test 6");
+  check_case(s.singleNonDuplicate(t7) == 3, "test 7 (single at odd index)");
+}
+
 // slug -> test function
 static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"maximum-product-subarray", run_maximum_product_subarray},
@@ -297,6 +351,8 @@ static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"find-peak-element", run_find_peak_element},
     {"find-minimum-in-rotated-sorted-array", run_find_min_rotated},
     {"search-in-rotated-sorted-array-ii", run_search_rotated_ii},
+    {"search-a-2d-matrix-ii", run_search_2d_matrix_ii},
+    {"single-element-in-a-sorted-array", run_single_element_sorted},
 };
 
 void run_problem(const std::string& slug) {

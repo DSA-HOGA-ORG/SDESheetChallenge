@@ -190,16 +190,17 @@ HOW TO USE THIS LOG:
 
 ---
 
-## Day 06 — Tuesday, 29 Sep 2026
+## Day 10 — Friday, 2 Oct 2026
 
 **Topic:** Binary Search
-**Subtopic:** Binary Search (on the answer's monotonicity)
-**Problems solved:** 1 / 1
+**Subtopic:** Binary Search (slope, rotated arrays, 2D matrices)
+**Problems solved:** 6 / 6
 **Total time spent:** —
 
 ### Summary
-Solved Find Peak Element with the standard slope-based binary search on an
-unsorted array.
+Binary Search block: Find Peak Element, Find Minimum in Rotated Sorted Array,
+Search in Rotated Sorted Array II, Search a 2D Matrix II, Single Element in a
+Sorted Array, and Find a Peak Element II.
 
 ---
 
@@ -218,6 +219,32 @@ unsorted array.
   - <!-- fill in -->
 - **What I learned:**
   - <!-- fill in -->
+- **Next steps:**
+  - <!-- fill in -->
+
+---
+
+### Problem: Find a Peak Element II (1901)
+- **Link:** [LeetCode](https://leetcode.com/problems/find-a-peak-element-ii/) | [Solution](../BinarySearch/BinarySearch/FindPeakElementII.cpp)
+- **Status:** ☑ Solved
+- **Time taken:** —
+- **Approach:**
+  - Binary search over columns; for the mid column, find the row holding its
+    maximum value
+  - That cell is automatically greater than its vertical neighbours, so only the
+    horizontal neighbours need checking
+  - If both horizontal neighbours are smaller, `{row, mid}` is a peak; otherwise
+    move to the side that still rises above the current value
+  - `mat[0]` and `mat[0][0]` give the row and column counts
+- **Complexity:** Time O(n · log m) / Space O(1)
+- **Mistakes made:**
+  - Wrote `<` when scanning for the column maximum, so `row` stayed `-1` and the
+    run crashed on a negative index — needs `>`
+  - Bounds check `mid + 1 >= 0` was always true; needed `mid + 1 < m`
+  - Compared `mat[row][high]` instead of `mat[row][mid]`, checking the wrong column
+- **What I learned:**
+  - Reducing a 2D problem to 1D by taking the max per column makes the vertical
+    neighbour condition free
 - **Next steps:**
   - <!-- fill in -->
 
@@ -481,7 +508,7 @@ HOW TO USE THIS LOG:
 - Append new days at the bottom, always keeping the most recent day last.
 
 ---
-## Day 06 — <Day>, <Date>
+## Day 11 — <Day>, <Date>
 
 **Topic:** —
 **Subtopic:** —

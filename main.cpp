@@ -55,6 +55,7 @@ void check_case(bool ok, const std::string& label) {
 #include "BinarySearch/BinarySearch/SearchInRotatedSortedArrayII.cpp"
 #include "BinarySearch/BinarySearch/Search2DMatrixII.cpp"
 #include "BinarySearch/BinarySearch/SingleElementInSortedArray.cpp"
+#include "BinarySearch/BinarySearch/FindPeakElementII.cpp"
 
 // ---- test runners (test cases live here) ----
 void run_count_inversions() {
@@ -332,6 +333,48 @@ void run_single_element_sorted() {
   check_case(s.singleNonDuplicate(t7) == 3, "test 7 (single at odd index)");
 }
 
+void run_find_peak_element_ii() {
+  find_peak_element_ii::Solution s;
+  int R, C;
+  auto valid = [&](vector<vector<int>>& mat, vector<int> p) {
+    if (p.size() != 2) return false;
+    R = p[0]; C = p[1];
+    if (R < 0 || R >= (int)mat.size() || C < 0 || C >= (int)mat[0].size()) return false;
+    int v = mat[R][C];
+    int dr[] = {-1, 1, 0, 0}, dc[] = {0, 0, -1, 1};
+    for (int d = 0; d < 4; d++) {
+      int nr = R + dr[d], nc = C + dc[d];
+      if (nr < 0 || nc < 0 || nr >= (int)mat.size() || nc >= (int)mat[0].size()) continue;
+      if (mat[nr][nc] >= v) return false;
+    }
+    return true;
+  };
+
+  vector<vector<int>> t1{{1, 2, 1}, {3, 5, 2}, {2, 3, 1}};
+  vector<int> r1 = s.findPeakGrid(t1);
+  check_case(valid(t1, r1), "test 1 (example 1)");
+
+  vector<vector<int>> t2{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+  vector<int> r2 = s.findPeakGrid(t2);
+  check_case(valid(t2, r2), "test 2 (strictly increasing)");
+
+  vector<vector<int>> t3{{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
+  vector<int> r3 = s.findPeakGrid(t3);
+  check_case(valid(t3, r3), "test 3 (strictly decreasing)");
+
+  vector<vector<int>> t4{{1}};
+  vector<int> r4 = s.findPeakGrid(t4);
+  check_case(valid(t4, r4), "test 4 (1x1)");
+
+  vector<vector<int>> t5{{1, 2}, {3, 4}};
+  vector<int> r5 = s.findPeakGrid(t5);
+  check_case(valid(t5, r5), "test 5 (2x2)");
+
+  vector<vector<int>> t6{{1, 3, 2}, {4, 6, 5}, {7, 9, 8}, {2, 4, 1}};
+  vector<int> r6 = s.findPeakGrid(t6);
+  check_case(valid(t6, r6), "test 6 (4x3 mixed)");
+}
+
 // slug -> test function
 static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"maximum-product-subarray", run_maximum_product_subarray},
@@ -353,6 +396,7 @@ static const std::map<std::string, std::function<void()>> PROBLEMS = {
     {"search-in-rotated-sorted-array-ii", run_search_rotated_ii},
     {"search-a-2d-matrix-ii", run_search_2d_matrix_ii},
     {"single-element-in-a-sorted-array", run_single_element_sorted},
+{"find-a-peak-element-ii", run_find_peak_element_ii},
 };
 
 void run_problem(const std::string& slug) {
